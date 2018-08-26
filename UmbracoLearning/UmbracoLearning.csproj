@@ -83,6 +83,10 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Bin\System.Web.Mvc.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
@@ -90,6 +94,10 @@
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
+    <Reference Include="umbraco, Version=1.0.6659.16878, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Bin\umbraco.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
@@ -242,11 +250,15 @@
     <Content Include="Config\Lang\zh-CN.user.xml" />
     <Content Include="Config\Splashes\booting.aspx" />
     <Content Include="Config\Splashes\noNodes.aspx" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Site.css" />
     <Content Include="css\font-awesome.min.css" />
     <Content Include="css\main.css" />
     <Content Include="css\umbraco-starterkit-style.css" />
     <Content Include="default.aspx" />
     <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="images\banner.jpg" />
     <Content Include="images\pic01.jpg" />
@@ -287,8 +299,14 @@
     <Content Include="obj\Debug\UmbracoLearning.csproj.FileListAbsolute.txt" />
     <Content Include="obj\Debug\UmbracoLearning.dll" />
     <Content Include="obj\Debug\UmbracoLearning.pdb" />
+    <Content Include="scripts\bootstrap.js" />
+    <Content Include="scripts\bootstrap.min.js" />
+    <None Include="scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="scripts\jquery-1.10.2.js" />
+    <Content Include="scripts\jquery-1.10.2.min.js" />
     <Content Include="scripts\jquery.min.js" />
     <Content Include="scripts\main.js" />
+    <Content Include="scripts\modernizr-2.6.2.js" />
     <Content Include="scripts\skel.min.js" />
     <Content Include="scripts\umbraco-starterkit-app.js" />
     <Content Include="scripts\util.js" />
@@ -1677,6 +1695,10 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\ElementsController.cs" />
+    <Compile Include="Controllers\GenericController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\SiteSharedLayoutController.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
@@ -1724,6 +1746,9 @@
     <Content Include="obj\Debug\UmbracoLearning.csproj.CopyComplete" />
     <Content Include="obj\Debug\UmbracoLearning.csproj.CoreCompileInputs.cache" />
     <Content Include="obj\Debug\UmbracoLearning.csprojAssemblyReference.cache" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <None Include="packages.config" />
     <Content Include="Umbraco\assets\fonts\helveticons\helveticons.eot" />
     <Content Include="Umbraco\assets\fonts\helveticons\helveticons.ttf" />
@@ -1895,6 +1920,15 @@
     <Content Include="Views\Web.config" />
     <Content Include="Views\Home.cshtml" />
     <Content Include="Views\WebbaseTemplate.cshtml" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Partials\SharedLayout\Header.cshtml" />
+    <Content Include="scripts\jquery-1.10.2.min.map" />
+    <Content Include="Views\Partials\SharedLayout\Footer.cshtml" />
+    <Content Include="Views\Partials\Home\Banner.cshtml" />
+    <Content Include="Views\Partials\Home\SectionOne.cshtml" />
+    <Content Include="Views\Partials\Home\SectionTwo.cshtml" />
+    <Content Include="Views\Partials\Home\SectionThree.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
